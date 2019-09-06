@@ -1,1 +1,15 @@
-<p>game-score works!</p>
+<h4>Choose a game:</h4>
+<select (change)="gameChanger($event)">
+    <option *ngFor="let game of games" [value]="game.gamePk">
+        {{game.teams.away.team.name}} @ {{game.teams.home.team.name}}
+    </option>
+</select>
+
+<div class="score-box">
+    <div class="left">
+        {{games[selectedGameIndex].teams.away.team.name}}: {{games[selectedGameIndex].teams.away.score}}
+    </div>
+    <div>
+        {{games[selectedGameIndex].teams.home.team.name}}: {{games[selectedGameIndex].teams.home.score}}
+    </div>
+</div>

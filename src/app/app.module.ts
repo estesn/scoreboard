@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { GameScoreComponent } from './game-score/game-score.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { GameService } from './services/games.service';
+import { HttpModule } from '@angular/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,9 +17,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [
+    GameService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
