@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GameService } from 'src/app/services/games.service';
+import { GameService } from '../services/game.service';
 
 export interface Game {
   gamePk: string;
