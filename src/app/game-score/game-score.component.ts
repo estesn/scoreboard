@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GameService } from '../services/game.service';
+import { GameService } from '../../app/services/game.service';
 
 export interface Game {
   gamePk: string;
@@ -38,9 +38,9 @@ export class GameScoreComponent implements OnInit {
             },
             error => {
               /* this.errorMessage = <any>error;
-              this.openSnackBar('Query failed due to web service error. Please try again later.', 'OK', 8000); */
+              this.openSnackBar('Query failed due to web service error. Please try again later.', 'OK', 8000);*/
             }
-          );
+          ); 
 
   }
 

@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { GameScoreComponent } from './game-score/game-score.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { GameService } from './services/games-service';
 import { HttpModule } from '@angular/http';
+import { GameService } from './services/game.service';
 
 @NgModule({
   declarations: [
