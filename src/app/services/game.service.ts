@@ -15,7 +15,13 @@ export class GameService {
 
   public getGames(): Observable<any[]> {
 
-    return this._http.get('http://statsapi.mlb.com/api/v1/schedule/games/?sportId=1&date=09/05/2019')
+    var today = new Date();
+
+    var month = today.getMonth() + 1;
+    var day = today.getDate();
+    var year = today.getFullYear();
+
+    return this._http.get('https://statsapi.mlb.com/api/v1/schedule/games/?sportId=1&date=' + month + '/' + day + '/' + year)
       .map((response: Response) => <any[]>response.json())
       // .do(data => console.log('Samples data: ' + JSON.stringify(data)))
       .catch(this.handleError);
